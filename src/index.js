@@ -1,20 +1,34 @@
-import _ from 'lodash';
-import './style.css';
-import Icon from './icon.png';
+import _ from "lodash";
+import "./style.css";
 
-function component() {
-    const element = document.createElement('div');
-  
-   // Lodash, now imported by this script
-    element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-    element.classList.add('hello');
-
-      // Add the image to our existing div.
-  const myIcon = new Image();
-  myIcon.src = Icon;
-
-  element.appendChild(myIcon);
-    return element;
-  }
-  
-  document.body.appendChild(component());
+let tasks = () => {
+  let list = [
+    {
+      description: "fight bad guys",
+      completed: true,
+      index: 0,
+    },
+    {
+      description: "complete project",
+      completed: false,
+      index: 1,
+    },
+    {
+      description: "learn sass",
+      completed: false,
+      index: 2,
+    },
+  ];
+  let mission = document.getElementById("mission");
+  list.forEach((task) => {
+    let li = document.createElement("li");
+    let checkbox = document.createElement("input");
+    let work = document.createElement("p");
+    checkbox.type = "checkbox";
+    work.innerText = task.description;
+    li.appendChild(checkbox);
+    li.appendChild(work);
+    mission.appendChild(li);
+  });
+};
+tasks();
