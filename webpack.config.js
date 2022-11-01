@@ -2,13 +2,14 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
+  mode: 'development',
   entry: './src/index.js',
   devServer: {
     static: './dist',
   },
   plugins: [
     new HtmlWebpackPlugin({
-        template: './src/index.html',
+      template: './src/index.html',
     }),
   ],
   module: {
@@ -25,9 +26,9 @@ module.exports = {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
         type: 'asset/resource',
       },
-     ],
+    ],
   },
-  
+
   output: {
     filename: '[name].js',
     path: path.resolve(__dirname, 'dist'),
@@ -37,5 +38,3 @@ module.exports = {
     runtimeChunk: 'single',
   },
 };
-
-
