@@ -1,33 +1,40 @@
 import './style.css';
+import Store from './modules/locolstorage.js';
+import ToDoInfo from './modules/add.js';
 
-const tasks = () => {
-  const list = [
-    {
-      description: 'fight bad guys',
-      completed: true,
-      index: 0,
-    },
-    {
-      description: 'complete project',
-      completed: false,
-      index: 1,
-    },
-    {
-      description: 'learn sass',
-      completed: false,
-      index: 2,
-    },
-  ];
-  const mission = document.getElementById('mission');
-  list.forEach((task) => {
-    const li = document.createElement('li');
-    const checkbox = document.createElement('input');
-    const work = document.createElement('p');
-    checkbox.type = 'checkbox';
-    work.innerText = task.description;
-    li.appendChild(checkbox);
-    li.appendChild(work);
-    mission.appendChild(li);
-  });
+const input = document.getElementById('input');
+document.addEventListener('DOMContentLoaded', ToDoInfo);
+input.addEventListener('keypress', (event) => {
+  if (event.key === 'Enter') {
+    event.preventDefault();
+    const addedwork = input.value;
+    const retrieveData = localStorage.getItem('list');
+    let ind = 1;
+    if (retrieveData) {
+      const previousData = JSON.parse(retrieveData);
+      for (let i = 0; i < previousData.length; i += 1) {
+        ind += 1;
+      }
+    }
+    const list = new ToDoInfo(addedwork, ind);
+    Store.getlist();
+    Store.addlist(list);
+    ToDoInfo.addToList(list);
+    input.value = '';
+  }
+});
+
+const retrieveData = localStorage.getItem('list');
+const body = document.querySelector('body');
+body.onload = () => {
+  if (retrieveData) {
+    const previousData = JSON.parse(retrieveData);
+    for (let i = 0; i < previousData.length; i += 1) {
+      ToDoInfo.addToList(previousData[i]);
+    }
+  }
 };
-tasks();
+document.querySelector('.clear').addEventListener('click', () => {
+  ToDoInfo.deletetask();
+  Store.removework();
+});
