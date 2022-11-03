@@ -2,8 +2,8 @@ import "./style.css";
 import { conformsTo } from "lodash";
 import Store from "./modules/locolstorage.js";
 import ToDoInfo from "./modules/add.js";
-import { call } from "./modules/edit.js";
 
+// added input to active event listener
 const input = document.getElementById("input");
 document.addEventListener("DOMContentLoaded", ToDoInfo);
 input.addEventListener("keypress", (event) => {
@@ -11,6 +11,7 @@ input.addEventListener("keypress", (event) => {
     event.preventDefault();
     const addedwork = input.value;
     const retrieveData = localStorage.getItem("list");
+    // created the index for Local storage
     let ind = 1;
     if (retrieveData) {
       const previousData = JSON.parse(retrieveData);
@@ -22,10 +23,12 @@ input.addEventListener("keypress", (event) => {
     Store.getlist();
     Store.addlist(list);
     ToDoInfo.addToList(list);
+    // empty's the value of the input
     input.value = "";
   }
 });
 
+// retrieves any data from local storage
 const retrieveData = localStorage.getItem("list");
 const body = document.querySelector("body");
 body.onload = () => {
@@ -36,6 +39,7 @@ body.onload = () => {
     }
   }
 };
+// actives the clear button when it clicked
 document.querySelector(".clear").addEventListener("click", () => {
   ToDoInfo.deletetask();
   Store.removework();

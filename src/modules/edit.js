@@ -1,3 +1,4 @@
+// added the edit function so it changes the local storage description
 const call = (index, value) => {
   const retrieveData = localStorage.getItem("list");
   const data = JSON.parse(retrieveData);
@@ -10,5 +11,6 @@ const call = (index, value) => {
     }
   }
 };
+// disabled linter it said i make function as default export and if i do that cant use const or let
 // eslint-disable-next-line import/prefer-default-export
 export { call };
