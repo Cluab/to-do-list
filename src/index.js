@@ -1,14 +1,16 @@
-import './style.css';
-import Store from './modules/locolstorage.js';
-import ToDoInfo from './modules/add.js';
+import "./style.css";
+import { conformsTo } from "lodash";
+import Store from "./modules/locolstorage.js";
+import ToDoInfo from "./modules/add.js";
+import { call } from "./modules/edit.js";
 
-const input = document.getElementById('input');
-document.addEventListener('DOMContentLoaded', ToDoInfo);
-input.addEventListener('keypress', (event) => {
-  if (event.key === 'Enter') {
+const input = document.getElementById("input");
+document.addEventListener("DOMContentLoaded", ToDoInfo);
+input.addEventListener("keypress", (event) => {
+  if (event.key === "Enter") {
     event.preventDefault();
     const addedwork = input.value;
-    const retrieveData = localStorage.getItem('list');
+    const retrieveData = localStorage.getItem("list");
     let ind = 1;
     if (retrieveData) {
       const previousData = JSON.parse(retrieveData);
@@ -20,12 +22,12 @@ input.addEventListener('keypress', (event) => {
     Store.getlist();
     Store.addlist(list);
     ToDoInfo.addToList(list);
-    input.value = '';
+    input.value = "";
   }
 });
 
-const retrieveData = localStorage.getItem('list');
-const body = document.querySelector('body');
+const retrieveData = localStorage.getItem("list");
+const body = document.querySelector("body");
 body.onload = () => {
   if (retrieveData) {
     const previousData = JSON.parse(retrieveData);
@@ -34,7 +36,7 @@ body.onload = () => {
     }
   }
 };
-document.querySelector('.clear').addEventListener('click', () => {
+document.querySelector(".clear").addEventListener("click", () => {
   ToDoInfo.deletetask();
   Store.removework();
 });

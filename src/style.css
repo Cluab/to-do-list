@@ -81,3 +81,9 @@ body {
   border: 0.5px solid rgba(0, 0, 0, 0.116);
   color: rgba(0, 0, 0, 0.377);
 }
+
+#edit {
+  border: none;
+  height: 40px;
+  font-size: 17px;
+}
