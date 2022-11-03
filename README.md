@@ -8,7 +8,7 @@
 
 - Major languages(HTMl, CSS & JAVASCRIPT)
 - Frameworks(NONE)
-- Technologies used(Github, Git & Github)
+- Technologies used(VS code, webpack, Git & Github)
 
 ## Getting Started
 
