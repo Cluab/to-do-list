@@ -1,3 +1,4 @@
+// function to update the completes status when checkbox is checked
 const status = (index, value) => {
   const retrieveData = localStorage.getItem('list');
   const data = JSON.parse(retrieveData);
@@ -12,7 +13,7 @@ const status = (index, value) => {
     }
   }
 };
-
+// updates the checkbox when page is reload
 const check = () => {
   const retrieveData = localStorage.getItem('list');
   const checkbox = document.querySelectorAll('.checkedbox');

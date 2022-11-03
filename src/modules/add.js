@@ -31,7 +31,7 @@ export default class ToDoInfo {
     work.addEventListener('input', () => {
       call(list.index, work.value);
     });
-    // loading ...
+    // updates the checkboxes in local storage
     checkbox.addEventListener('input', () => {
       status(list.index, checkbox.checked);
     });
