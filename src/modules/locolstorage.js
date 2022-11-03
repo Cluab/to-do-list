@@ -3,10 +3,10 @@ export default class Store {
   // get the local storage tasks or create an empty array
   static getlist = () => {
     let list;
-    if (localStorage.getItem("list") === null) {
+    if (localStorage.getItem('list') === null) {
       list = [];
     } else {
-      list = JSON.parse(localStorage.getItem("list"));
+      list = JSON.parse(localStorage.getItem('list'));
     }
     return list;
   };
@@ -16,7 +16,7 @@ export default class Store {
   static addlist = (works) => {
     const list = Store.getlist();
     list.push(works);
-    localStorage.setItem("list", JSON.stringify(list));
+    localStorage.setItem('list', JSON.stringify(list));
   };
 
   // remove tasks from array
@@ -43,6 +43,6 @@ export default class Store {
       }
     }
     // set new array as local storage
-    localStorage.setItem("list", JSON.stringify(list));
+    localStorage.setItem('list', JSON.stringify(list));
   };
 }

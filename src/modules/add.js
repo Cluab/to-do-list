@@ -1,4 +1,4 @@
-import { call } from "./edit.js";
+import { call } from './edit.js';
 // here is where i created the to do list functions
 export default class ToDoInfo {
   // created constructor
@@ -14,19 +14,19 @@ export default class ToDoInfo {
 
   // created the add function to html document
   static addToList = (list) => {
-    const mission = document.getElementById("mission");
-    const li = document.createElement("li");
-    const checkbox = document.createElement("input");
-    const work = document.createElement("input");
-    checkbox.type = "checkbox";
-    work.type = "text";
-    work.setAttribute("id", "edit");
-    checkbox.setAttribute("id", list.index);
+    const mission = document.getElementById('mission');
+    const li = document.createElement('li');
+    const checkbox = document.createElement('input');
+    const work = document.createElement('input');
+    checkbox.type = 'checkbox';
+    work.type = 'text';
+    work.setAttribute('id', 'edit');
+    checkbox.setAttribute('id', list.index);
     // added the edit function so it changes in local storage description
-    work.addEventListener("input", () => {
+    work.addEventListener('input', () => {
       call(list.index, work.value);
     });
-    checkbox.setAttribute("class", "checkedbox");
+    checkbox.setAttribute('class', 'checkedbox');
     work.value = list.description;
     li.appendChild(checkbox);
     li.appendChild(work);
@@ -35,21 +35,21 @@ export default class ToDoInfo {
   // added the delete function from the list
 
   static deletetask = () => {
-    const retrieveData = localStorage.getItem("list");
+    const retrieveData = localStorage.getItem('list');
     const data = JSON.parse(retrieveData);
-    const checkbox = document.querySelectorAll(".checkedbox");
+    const checkbox = document.querySelectorAll('.checkedbox');
     let count = 0;
     checkbox.forEach((onebyone) => {
       if (onebyone.checked === true) {
         // made sure that the value of check boxs changes the completed in local storage to true
         data[count].completed = onebyone.checked;
         onebyone.parentElement.remove();
-        localStorage.setItem("list", JSON.stringify(data));
+        localStorage.setItem('list', JSON.stringify(data));
         count += 1;
       } else if (onebyone.checked === false) {
         // made sure that the value of check boxs changes the completed in local storage to false
         data[count].completed = onebyone.checked;
-        localStorage.setItem("list", JSON.stringify(data));
+        localStorage.setItem('list', JSON.stringify(data));
         count += 1;
       }
     });
