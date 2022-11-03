@@ -1,4 +1,5 @@
-import { call } from './edit.js';
+import { call, removes, norm } from './edit.js';
+import { status } from './status.js';
 // here is where i created the to do list functions
 export default class ToDoInfo {
   // created constructor
@@ -16,8 +17,12 @@ export default class ToDoInfo {
   static addToList = (list) => {
     const mission = document.getElementById('mission');
     const li = document.createElement('li');
+    const div = document.createElement('div');
     const checkbox = document.createElement('input');
     const work = document.createElement('input');
+    const icon = document.createElement('i');
+    icon.setAttribute('class', 'fa-solid fa-trash');
+    div.setAttribute('class', 'none');
     checkbox.type = 'checkbox';
     work.type = 'text';
     work.setAttribute('id', 'edit');
@@ -26,10 +31,25 @@ export default class ToDoInfo {
     work.addEventListener('input', () => {
       call(list.index, work.value);
     });
+    // loading ...
+    checkbox.addEventListener('input', () => {
+      status(list.index, checkbox.checked);
+    });
+    // added the show icon
+    li.addEventListener('dblclick', () => {
+      removes(list.index, li, work, div);
+    });
+    // added the remove icon
+    li.addEventListener('click', () => {
+      norm(list.index, li, work, div);
+    });
+
     checkbox.setAttribute('class', 'checkedbox');
     work.value = list.description;
     li.appendChild(checkbox);
     li.appendChild(work);
+    div.appendChild(icon);
+    li.appendChild(div);
     mission.appendChild(li);
   };
   // added the delete function from the list
