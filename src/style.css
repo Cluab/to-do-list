@@ -7,6 +7,14 @@
   font-style: normal;
 }
 
+.none {
+  display: none;
+}
+
+.show {
+  display: contents;
+}
+
 body {
   background-color: white;
   height: 100vh;
@@ -74,10 +82,22 @@ body {
   max-width: 500px;
 }
 
+#mission li div i {
+  color: rgb(116, 8, 8);
+  padding-top: 10px;
+  padding-left: 7em;
+}
+
 .clear {
   height: 50px;
   width: 100%;
   font-size: 15px;
   border: 0.5px solid rgba(0, 0, 0, 0.116);
   color: rgba(0, 0, 0, 0.377);
+}
+
+#edit {
+  border: none;
+  height: 40px;
+  font-size: 17px;
 }
