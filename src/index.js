@@ -1,6 +1,7 @@
 import './style.css';
 import Store from './modules/locolstorage.js';
 import ToDoInfo from './modules/add.js';
+import { check } from './modules/status.js';
 
 // added input to active event listener
 const input = document.getElementById('input');
@@ -37,6 +38,7 @@ body.onload = () => {
     for (let i = 0; i < previousData.length; i += 1) {
       ToDoInfo.addToList(previousData[i]);
     }
+    check();
   }
 };
 
