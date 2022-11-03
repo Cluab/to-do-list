@@ -37,6 +37,13 @@ body.onload = () => {
     for (let i = 0; i < previousData.length; i += 1) {
       ToDoInfo.addToList(previousData[i]);
     }
+    const checkbox = document.querySelectorAll('.checkedbox');
+    let count = 0;
+    checkbox.forEach((onebyone) => {
+      const data = JSON.parse(retrieveData);
+      onebyone.checked = data[count].completed;
+      count += 1;
+    });
   }
 };
 
