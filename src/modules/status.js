@@ -12,6 +12,15 @@ const status = (index, value) => {
     }
   }
 };
-// disabled linter it said i make function as default export and if i do that cant use const or let
-// eslint-disable-next-line import/prefer-default-export
-export { status };
+
+const check = () => {
+  const retrieveData = localStorage.getItem('list');
+  const checkbox = document.querySelectorAll('.checkedbox');
+  let count = 0;
+  checkbox.forEach((onebyone) => {
+    const data = JSON.parse(retrieveData);
+    onebyone.checked = data[count].completed;
+    count += 1;
+  });
+};
+export { status, check };
