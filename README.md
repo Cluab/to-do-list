@@ -21,9 +21,9 @@ To get a local copy up and running follow these simple example steps.
 
 make sure you got webpack installed
 
-### Deployment
+### Live version
 
-run the npm start command
+[to-do list app](https://cluab.github.io/to-do-list/dist/)
 
 ## Authors
 
