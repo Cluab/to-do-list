@@ -17,11 +17,7 @@
 
 To get a local copy up and running follow these simple example steps.
 
-### Setup
-
-make sure you got webpack installed
-
-### Live version
+### Live demo
 
 [to-do list app](https://cluab.github.io/to-do-list/dist/)
 
