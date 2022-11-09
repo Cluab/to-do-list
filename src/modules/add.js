@@ -10,10 +10,6 @@ export default class ToDoInfo {
     this.index = ind;
   }
 
-  static Add = (description) => {
-    ToDoInfo(description);
-  };
-
   // created the add function to html document
   static addToList = (list) => {
     const mission = document.getElementById('mission');
@@ -55,24 +51,20 @@ export default class ToDoInfo {
   };
   // added the delete function from the list
 
-  static deletetask = (list) => {
+  static deletetask = () => {
     const retrieveData = localStorage.getItem('list');
     const data = JSON.parse(retrieveData);
     const checkbox = document.querySelectorAll('.checkedbox');
-    let count = 0;
     checkbox.forEach((onebyone) => {
-      onebyone.checked= list.completed;
       if (onebyone.checked === true) {
         // made sure that the value of check boxs changes the completed in local storage to true
-        data[count].completed = onebyone.checked;
+
         onebyone.parentElement.remove();
         localStorage.setItem('list', JSON.stringify(data));
-        count += 1;
       } else if (onebyone.checked === false) {
         // made sure that the value of check boxs changes the completed in local storage to false
-        // data[count].completed = onebyone.checked;
+
         localStorage.setItem('list', JSON.stringify(data));
-        count += 1;
       }
     });
   };
