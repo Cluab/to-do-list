@@ -9,12 +9,17 @@ const call = (index, value) => {
     }
   }
 };
+
+const removeList = (icon) => {
+  icon.parentElement.remove();  
+};
+
 // when double clicked on the li the icon appears
 const removes = (index, li, work, icon) => {
   li.style.backgroundColor = 'antiquewhite';
-  work.style.backgroundColor = 'antiquewhite';
+  work.style.backgroundColor = 'antiquewhite';  
   icon.setAttribute('class', 'show');
-  icon.addEventListener('click', () => {
+  icon.addEventListener('click', () => {  
     const retrieveData = localStorage.getItem('list');
     const data = JSON.parse(retrieveData);
     for (let i = 0; i < data.length; i += 1) {
@@ -28,6 +33,7 @@ const removes = (index, li, work, icon) => {
         }
       }
       localStorage.setItem('list', JSON.stringify(data));
+      removeList(icon);
       icon.parentElement.remove();
     }
   });
@@ -39,4 +45,4 @@ const norm = (index, li, work, icon) => {
   icon.setAttribute('class', 'none');
 };
 
-export { call, removes, norm };
+export { call, removes, norm, removeList };

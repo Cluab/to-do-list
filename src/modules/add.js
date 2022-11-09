@@ -55,12 +55,13 @@ export default class ToDoInfo {
   };
   // added the delete function from the list
 
-  static deletetask = () => {
+  static deletetask = (list) => {
     const retrieveData = localStorage.getItem('list');
     const data = JSON.parse(retrieveData);
     const checkbox = document.querySelectorAll('.checkedbox');
     let count = 0;
     checkbox.forEach((onebyone) => {
+      onebyone.checked= list.completed;
       if (onebyone.checked === true) {
         // made sure that the value of check boxs changes the completed in local storage to true
         data[count].completed = onebyone.checked;
@@ -69,7 +70,7 @@ export default class ToDoInfo {
         count += 1;
       } else if (onebyone.checked === false) {
         // made sure that the value of check boxs changes the completed in local storage to false
-        data[count].completed = onebyone.checked;
+        // data[count].completed = onebyone.checked;
         localStorage.setItem('list', JSON.stringify(data));
         count += 1;
       }
