@@ -1,4 +1,3 @@
-// added the edit function so it changes the local storage description
 const call = (index, value) => {
   const retrieveData = localStorage.getItem('list');
   const data = JSON.parse(retrieveData);
@@ -10,6 +9,11 @@ const call = (index, value) => {
     }
   }
 };
+
+const removeList = (data, count, onebyone) => {
+  data[count].completed = onebyone.checked;
+};
+
 // when double clicked on the li the icon appears
 const removes = (index, li, work, icon) => {
   li.style.backgroundColor = 'antiquewhite';
@@ -29,6 +33,7 @@ const removes = (index, li, work, icon) => {
         }
       }
       localStorage.setItem('list', JSON.stringify(data));
+      removeList(icon);
       icon.parentElement.remove();
     }
   });
@@ -40,4 +45,6 @@ const norm = (index, li, work, icon) => {
   icon.setAttribute('class', 'none');
 };
 
-export { call, removes, norm };
+export {
+  call, removes, norm, removeList,
+};
