@@ -2,7 +2,7 @@ import ToDoInfo from '../modules/add.js';
 // imported ToDoInfo class from add.jd file
 
 // wraped our test with a describe
-describe('add tests', () => {
+describe('test-1', () => {
   // added some Dom minaplaytion for our tests
   document.body.innerHTML = '<div> <ul id="mission"> </ul> </div>';
   // added an object array to mimic local storage
