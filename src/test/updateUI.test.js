@@ -6,7 +6,7 @@ describe('test-2', () => {
   const list = [
     {
       description: 'wash car',
-      completed: true,
+      completed: false,
       index: 1,
     },
   ];

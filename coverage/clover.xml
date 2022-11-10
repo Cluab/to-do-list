@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1668072525642" clover="3.2.0">
-  <project timestamp="1668072525643" name="All files">
-    <metrics statements="87" coveredstatements="41" conditionals="12" coveredconditionals="2" methods="16" coveredmethods="4" elements="115" coveredelements="47" complexity="0" loc="87" ncloc="87" packages="1" files="3" classes="3"/>
+<coverage generated="1668073053630" clover="3.2.0">
+  <project timestamp="1668073053631" name="All files">
+    <metrics statements="88" coveredstatements="41" conditionals="12" coveredconditionals="2" methods="16" coveredmethods="4" elements="116" coveredelements="47" complexity="0" loc="88" ncloc="88" packages="1" files="3" classes="3"/>
     <file name="add.js" path="C:\Users\ashas\to-do-list\src\modules\add.js">
-      <metrics statements="43" coveredstatements="32" conditionals="4" coveredconditionals="1" methods="8" coveredmethods="3"/>
+      <metrics statements="44" coveredstatements="32" conditionals="4" coveredconditionals="1" methods="8" coveredmethods="3"/>
       <line num="8" count="0" type="stmt"/>
       <line num="9" count="0" type="stmt"/>
       <line num="10" count="0" type="stmt"/>
@@ -23,6 +23,7 @@
       <line num="28" count="2" type="stmt"/>
       <line num="29" count="0" type="stmt"/>
       <line num="30" count="0" type="stmt"/>
+      <line num="31" count="0" type="stmt"/>
       <line num="32" count="0" type="stmt"/>
       <line num="35" count="2" type="stmt"/>
       <line num="36" count="0" type="stmt"/>

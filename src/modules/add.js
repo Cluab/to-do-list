@@ -28,8 +28,8 @@ export default class ToDoInfo {
     work.addEventListener('input', () => {
       const retrieveData = localStorage.getItem('list');
       const data = JSON.parse(retrieveData);
-
       call(list.index, work.value, data);
+      localStorage.setItem('list', JSON.stringify(data));
     });
     // updates the checkboxes in local storage
     checkbox.addEventListener('input', () => {
