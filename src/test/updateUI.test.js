@@ -1,6 +1,9 @@
 import { call } from '../modules/edit.js';
 import ToDoInfo from '../modules/add.js';
 import { status } from '../modules/status.js';
+import Store from '../modules/locolstorage.js';
+
+// add test functions for checking the status and clear all completed
 
 describe('test-2', () => {
   document.body.innerHTML = '<div> <ul id="mission"> </ul> </div>';
@@ -55,5 +58,10 @@ describe('test-2', () => {
     ToDoInfo.deletetask();
     listed = document.querySelectorAll('#mission li');
     expect(listed).toHaveLength(1);
+  });
+
+  test('Delete checked items from the array', () => {
+    Store.removework(list);
+    expect(list).toHaveLength(1);
   });
 });

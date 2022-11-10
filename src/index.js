@@ -44,6 +44,7 @@ body.onload = () => {
 
 // actives the clear button when it clicked
 document.querySelector('.clear').addEventListener('click', () => {
+  const list = Store.getlist();
   ToDoInfo.deletetask();
-  Store.removework();
+  Store.removework(list);
 });
