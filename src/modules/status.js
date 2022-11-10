@@ -1,18 +1,31 @@
 // function to update the completes status when checkbox is checked
-const status = (index, value) => {
-  const retrieveData = localStorage.getItem('list');
-  const data = JSON.parse(retrieveData);
+
+// const update = (value, data, index) => {
+//   for (let i = 0; i < data.length; i += 1) {
+//     if (data[i].index === index) {
+//       const retrieveData = localStorage.getItem('list');
+//       const stat = JSON.parse(retrieveData);
+//       value = stat[i].completed;
+//     }
+//   }
+// };
+
+const status = (index, value, data) => {
+  // const retrieveData = localStorage.getItem('list');
+  // const data = JSON.parse(retrieveData);
 
   for (let i = 0; i < data.length; i += 1) {
     if (data[i].index === index) {
       data[i].completed = value;
-      localStorage.setItem('list', JSON.stringify(data));
-      const retrieveData = localStorage.getItem('list');
-      const stat = JSON.parse(retrieveData);
-      value = stat[i].completed;
+      // localStorage.setItem('list', JSON.stringify(data));
+      // const retrieveData = localStorage.getItem('list');
+      // const stat = JSON.parse(retrieveData);
+      // value = stat[i].completed;
+      // update(value, data, index);
     }
   }
 };
+
 // updates the checkbox when page is reload
 const check = () => {
   const retrieveData = localStorage.getItem('list');

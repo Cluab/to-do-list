@@ -1,5 +1,6 @@
 import { call } from '../modules/edit.js';
 import ToDoInfo from '../modules/add.js';
+import { status } from '../modules/status.js';
 
 describe('test-2', () => {
   document.body.innerHTML = '<div> <ul id="mission"> </ul> </div>';
@@ -16,5 +17,13 @@ describe('test-2', () => {
   call(1, changedContent.value, list);
   test('Edit the task description', () => {
     expect(list[0].description).toBe('read newspaper');
+  });
+
+  const checked = document.querySelector('.checkedbox');
+  // made the checked boxes inside our li equel to true
+  checked.checked = true;
+  status(1, checked.checked, list);
+  test('Edit the task completed', () => {
+    expect(list[0].completed).toBe(true);
   });
 });

@@ -33,7 +33,10 @@ export default class ToDoInfo {
     });
     // updates the checkboxes in local storage
     checkbox.addEventListener('input', () => {
-      status(list.index, checkbox.checked);
+      const retrieveData = localStorage.getItem('list');
+      const data = JSON.parse(retrieveData);
+      status(list.index, checkbox.checked, data);
+      localStorage.setItem('list', JSON.stringify(data));
     });
     // added the show icon
     li.addEventListener('dblclick', () => {
