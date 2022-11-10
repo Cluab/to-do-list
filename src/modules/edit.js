@@ -33,7 +33,6 @@ const removes = (index, li, work, icon) => {
         }
       }
       localStorage.setItem('list', JSON.stringify(data));
-      removeList(icon);
       icon.parentElement.remove();
     }
   });
