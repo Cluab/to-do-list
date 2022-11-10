@@ -1,11 +1,11 @@
-const call = (index, value) => {
-  const retrieveData = localStorage.getItem('list');
-  const data = JSON.parse(retrieveData);
+const call = (index, value, data) => {
+  // const retrieveData = localStorage.getItem('list');
+  // const data = JSON.parse(retrieveData);
 
   for (let i = 0; i < data.length; i += 1) {
     if (data[i].index === index) {
       data[i].description = value;
-      localStorage.setItem('list', JSON.stringify(data));
+      // localStorage.setItem('list', JSON.stringify(data));
     }
   }
 };
@@ -33,7 +33,6 @@ const removes = (index, li, work, icon) => {
         }
       }
       localStorage.setItem('list', JSON.stringify(data));
-      removeList(icon);
       icon.parentElement.remove();
     }
   });

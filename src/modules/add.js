@@ -26,11 +26,17 @@ export default class ToDoInfo {
     checkbox.setAttribute('id', list.index);
     // added the edit function so it changes in local storage description
     work.addEventListener('input', () => {
-      call(list.index, work.value);
+      const retrieveData = localStorage.getItem('list');
+      const data = JSON.parse(retrieveData);
+      call(list.index, work.value, data);
+      localStorage.setItem('list', JSON.stringify(data));
     });
     // updates the checkboxes in local storage
     checkbox.addEventListener('input', () => {
-      status(list.index, checkbox.checked);
+      const retrieveData = localStorage.getItem('list');
+      const data = JSON.parse(retrieveData);
+      status(list.index, checkbox.checked, data);
+      localStorage.setItem('list', JSON.stringify(data));
     });
     // added the show icon
     li.addEventListener('dblclick', () => {
