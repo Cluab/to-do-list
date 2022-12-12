@@ -27,7 +27,7 @@ To get a local copy up and running follow these simple example steps.
 
 - GitHub: [@cluab](https://github.com/Cluab)
 - Twitter: [@cluab122](https://twitter.com/cluab122)
-- LinkedIn: [Ebrahim Al-Yousefi](https://linkedin.com/in/Ebrahim Al-Yousefi)
+- LinkedIn: [Ebrahim Al-Yousefi](https://linkedin.com/in/EbrahimAl-Yousefi)
 - Instagram: [@27.i.b](https://www.instagram.com/27.i.b/)
 
 ## 🤝 Contributing
