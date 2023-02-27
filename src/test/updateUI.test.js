@@ -1,7 +1,7 @@
 import { call } from '../modules/edit.js';
 import ToDoInfo from '../modules/add.js';
 import { status } from '../modules/status.js';
-import Store from '../modules/locolstorage.js';
+import Store from '../modules/localstorage.js';
 
 // add test functions for checking the status and clear all completed
 
