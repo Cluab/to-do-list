@@ -6,9 +6,6 @@
   <h3>A simple to do list where you can list your tasks</h3>
 </div>
 
-## Introduction
-
-Microverse Article is a simple website that provides an introduction to Microverse, an online school for remote software developers. The website is designed to be easy to use and navigate, with a clean and modern design that follows Microverse's branding guidelines.
 
 ## About the Project
 
