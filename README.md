@@ -41,13 +41,18 @@ To run this project, you'll need to install:
 
 `git clone git@github.com:Cluab/to-do-list.git`
 
+2. Run in the Terminal
+
+`npm i`
+
 ### Usage
 
 To run the project, follow these steps:
 
 1. Open the project in VS Code.
-2. Click on "Go Live" on the bottom right section of VS Code.
-3. The website will open in your default web browser.
+2. Run in the Terminal 
+   `npm start`.
+5. The website will open in your default web browser.
 
 ## Authors
 
