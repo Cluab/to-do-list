@@ -1,25 +1,58 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
+<div align="center">
+  <img src="logo.png" alt="logo" width="300"  height="auto" />
+  <br/>
 
-# To-Do-list
+  <h1>To-Do-list</h1>
+  <h3>A simple to do list where you can list your tasks</h3>
+</div>
 
-> in this project im creating a to do list with webpack, as the main objective is to learn to use it.
 
-## Built With
+## About the Project
 
-- Major languages(HTMl, CSS & JAVASCRIPT)
-- Frameworks(NONE)
-- Technologies used(VS code, webpack, Git & Github)
+In this project, I am creating a to-do list with Webpack, as the main objective is to learn to use it.
+
+### Built With
+
+The To-Do List app was built with:
+
+- Major languages (HTML, CSS, and JavaScript)
+- Frameworks (Jest)
+- Technologies used (VS Code, Webpack, Git, and GitHub)
+
+### Live Demo
+
+You can view a live demo of the app at [To-Do List App](https://cluab.github.io/to-do-list/dist/)
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
+To get a local copy up and running, follow these steps:
 
-To get a local copy up and running follow these simple example steps.
+### Prerequisites
 
-### Live demo
+To run this project, you'll need to install:
 
-[to-do list app](https://cluab.github.io/to-do-list/dist/)
+- VS Code
+- Live Server extension
+- Node.js
+
+### Installation
+
+1. Clone this repository to your desired folder:
+
+`git clone git@github.com:Cluab/to-do-list.git`
+
+2. Run in the Terminal
+
+`npm i`
+
+### Usage
+
+To run the project, follow these steps:
+
+1. Open the project in VS Code.
+2. Run in the Terminal 
+   `npm start`.
+5. The website will open in your default web browser.
 
 ## Authors
 
@@ -27,27 +60,27 @@ To get a local copy up and running follow these simple example steps.
 
 - GitHub: [@cluab](https://github.com/Cluab)
 - Twitter: [@cluab122](https://twitter.com/cluab122)
-- LinkedIn: [Ebrahim Al-Yousefi](https://linkedin.com/in/EbrahimAl-Yousefi)
+- LinkedIn: [Ebrahim Al-Yousefi](https://www.linkedin.com/in/ebrahim-alyousefi/)
 - Instagram: [@27.i.b](https://www.instagram.com/27.i.b/)
 
-## 🤝 Contributing
+👤 **asharanjith**
 
-Contributions, issues, and feature requests are welcome!
+- GitHub: [@asharanjith](https://github.com/asharanjith)
+- Twitter: [@asha_cep](https://twitter.com/asha_cep)
+- LinkedIn: [asha-vijayan](https://www.linkedin.com/in/asha-vijayan-67179a18)
 
-Feel free to check the [issues page](../../issues/).
+## Contributing
 
-## Show your support
+Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/Cluab/to-do-list/issues) for any open issues.
 
-Give a ⭐️ if you like this project!
+## Show Your Support
 
-## Acknowledgments
+If you like this project, please give it a star on GitHub!
 
-- Thanks to the Microverse team for the great curriculum.
-- Thanks to the Code Reviewer(s) for the insightful feedback.
-- A great thanks to My coding partner(s), morning session team, and standup team for their contributions.
+## Acknowledgements
 
-## 📝 License
+- [Microverse](https://www.microverse.org/) for providing the education that inspired this project.
 
-This project is [MIT](./LICENSE) licensed.
+## License
 
-_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
+This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
