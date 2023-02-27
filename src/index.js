@@ -1,35 +1,26 @@
 import './style.css';
-import Store from './modules/locolstorage.js';
+import Store from './modules/localstorage.js';
 import ToDoInfo from './modules/add.js';
 import { check } from './modules/status.js';
 
-// added input to active event listener
+// Added input to active event listener improvements
 const input = document.getElementById('input');
 document.addEventListener('DOMContentLoaded', ToDoInfo);
 input.addEventListener('keypress', (event) => {
   if (event.key === 'Enter') {
     if (input.value === '') return;
     event.preventDefault();
-    const addedwork = input.value;
-    const retrieveData = localStorage.getItem('list');
-    // created the index for Local storage
-    let ind = 1;
-    if (retrieveData) {
-      const previousData = JSON.parse(retrieveData);
-      for (let i = 0; i < previousData.length; i += 1) {
-        ind += 1;
-      }
-    }
-    const list = new ToDoInfo(addedwork, ind);
+    const addedWork = input.value;
+    const list = new ToDoInfo(addedWork);
     Store.getlist();
     Store.addlist(list);
     ToDoInfo.addToList(list);
-    // empty's the value of the input
+    // Empty's the value of the input
     input.value = '';
   }
 });
 
-// retrieves any data from local storage
+// Retrieves any data from local storage
 const retrieveData = localStorage.getItem('list');
 const body = document.querySelector('body');
 body.onload = () => {
@@ -42,7 +33,7 @@ body.onload = () => {
   }
 };
 
-// actives the clear button when it clicked
+// Actives the clear button when it's clicked
 document.querySelector('.clear').addEventListener('click', () => {
   const list = Store.getlist();
   ToDoInfo.deletetask();
