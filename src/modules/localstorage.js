@@ -11,7 +11,7 @@ export default class Store {
     return list;
   };
 
-  // add new tasks to arry
+  // add new tasks to array
 
   static addlist = (works) => {
     const list = Store.getlist();
@@ -22,7 +22,6 @@ export default class Store {
   // remove tasks from array
 
   static removework = (list) => {
-    // const list = Store.getlist();
     for (let i = 0; i < list.length; i += 1) {
       if (list[i].completed === true) {
         // remove any completed with true
